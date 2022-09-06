@@ -4,10 +4,16 @@
     <h1>{{ title }}</h1>
     <p>{{ intro }}</p>
     <p>Detta är dock statisk text. Följt av data från databas.</p>
+    {% for row in rows %}
+    
     <ul>
-        {% for row in rows %}
-        <li>{{ row.name }}</li>
-        {% endfor %}
+        <div> 
+            <li>{{ row.name }}</li>
+            <li>{{ row.secret_identity }}</li>
+            <li>{{ row.bio }}</li>
+            <img src="webb-demo-Seth/public/images/SakamotoNichijou.gif" alt="Annoyed Cat">
+        </div>
     </ul>
+    {% endfor %}
 </main>
 {% endblock %}%
